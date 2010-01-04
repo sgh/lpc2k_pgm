@@ -6,7 +6,7 @@ all: lpc2k_pgm
 OBJS = lpc2k_pgm.o gui.o settings.o download.o uuencode.o ihex.o serial.o chipinfo.o boot_2xxx.o boot_23xx.o
 
 lpc2k_pgm: $(OBJS)
-	$(CC) -o lpc2k_pgm $(OBJS) `gtk-config --libs`
+	$(CC) -o lpc2k_pgm $(OBJS) `pkg-config --libs gtk+-2.0`
 	strip lpc2k_pgm
 
 chipinfo.o: boot_2xxx.h boot_23xx.h
@@ -30,6 +30,6 @@ clean:
 	rm -f lpc2k_pgm cksum_test *.o core core.* *.armobj
 
 gui.o: gui.c
-	$(CC) $(CFLAGS) `gtk-config --cflags` -c gui.c
+	$(CC) $(CFLAGS) `pkg-config --cflags gtk+-2.0` -c gui.c
 
 
