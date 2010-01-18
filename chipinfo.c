@@ -137,6 +137,7 @@ struct chip_info_struct chip_info[] = {
 //{"LPC2102 (16k)",  "??????",	 0x40000200, 0x1000,  4, lpc2138_layout, boot_2xxx},
 {"LPC2103 (32k)",  "327441",	 0x40000200, 0x1000,  8, lpc2138_layout, boot_2xxx},
 {"LPC2364 (128k)", "100924162",	 0x40000200, 0x1000, 11, lpc2138_layout, boot_23xx},
+{"LPC2364 (128k)", "369162498",	 0x40000200, 0x1000, 11, lpc2138_layout, boot_23xx},
 {"LPC2366 (256k)", "100924195",	 0x40000200, 0x1000, 15, lpc2138_layout, boot_23xx},
 {"LPC2368 (500k)", "100924197",	 0x40000200, 0x1000, 27, lpc2138_layout, boot_23xx},
 {"LPC2378 (500k)", "117702437",	 0x40000200, 0x1000, 27, lpc2138_layout, boot_23xx},
