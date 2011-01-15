@@ -120,8 +120,8 @@ or where ever you like.
 Contact Info:
 ------------
 
-Paul Stoffregen
-paul@pjrc.com
+Søren Holm
+sgh@sgh.dk
 http://www.pjrc.com/arm/lpc2k_pgm
 
 If you discover a bug, you want to request a new feature, or you have
