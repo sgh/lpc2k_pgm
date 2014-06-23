@@ -72,12 +72,7 @@ you do not have it, simply install from your linux distribution.
 Your serial port device file (usually /dev/ttyS0 or /dev/ttyS1) must
 allow permission for you to use the serial port.
 
-GTK 1.2 is used for the GUI.  Many newer systems only have GTK version
-2 (or higher).  If you have one of these systems, perhaps you can
-install GTK 1.2 (including the development libraries) to allow you to
-compile this code.  Alternately, you may be able to use the semi-static
-build, which includes a copy of this code built into the program.
-
+GTK 2.x is used for the GUI.
 
 
 Building and Installation:
