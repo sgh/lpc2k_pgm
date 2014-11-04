@@ -118,13 +118,29 @@ void run_as_emulator(char *program_name)
 
 	is_child = getenv("LPC2K_RUNNING_AS_EMULATOR");
 	if (is_child == NULL || strcmp(is_child, "yep")) {
+		char* const executables[] = {
+			"konsole",
+			"gnome-terminal",
+			"xterm",
+			NULL
+		};
+		char execvp_success = 0;
 		//printf("not running as emulator\n");
 		setenv("LPC2K_RUNNING_AS_EMULATOR", "yep", 1);
-		xterm_arg[0] = "xterm";
 		xterm_arg[1] = "-e";
 		xterm_arg[2] = program_name;
 		xterm_arg[3] = NULL;
-		execvp("xterm", xterm_arg);
+
+		for (int idx=0; executables[idx]; idx++) {
+			xterm_arg[0] = executables[idx];
+			if (execvp(xterm_arg[0], xterm_arg) == 0) {
+				execvp_success = 1;
+				continue;
+			}
+		}
+
+		if (!execvp_success)
+			fprintf(stderr,"Unable to run treminal. Please install konsole, gnome-terminal or xterm\n");
 		exit(1);
 	}
 }

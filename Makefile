@@ -1,4 +1,4 @@
-CFLAGS = -Wall -O2
+CFLAGS = -Wall -O2 -std=gnu99
 CC = gcc
 
 all: lpc2k_pgm
